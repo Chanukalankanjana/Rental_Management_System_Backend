@@ -60,4 +60,9 @@ public class CustomerServiceImpl implements CustomerService {
         }
         return null;
     }
+
+    @Override
+    public Customer findByName(String name) {
+        return mapper.convertValue(repository.findByName(name), Customer.class);
+    }
 }

@@ -14,4 +14,6 @@ public interface CustomerService {
     boolean deleteCustomer(Integer id);
 
     Customer getStudentById(Integer id);
+
+    Customer findByName(String name);
 }
