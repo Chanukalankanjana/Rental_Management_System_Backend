@@ -33,12 +33,12 @@ public class CustomerServiceImpl implements CustomerService {
         });
         return customerLiist;
     }
-//
-//    @Override
-//    public void updateCustomer(Customer customer) {
-//        if (repository.existsById(customer.getId())){
-//            CustomerEntity customerEntity = mapper.convertValue(customer, CustomerEntity.class);
-//            repository.save(customerEntity);
-//        }
-//    }
+
+    @Override
+    public void updateCustomer(Customer customer) {
+        if (repository.existsById(customer.getId())){
+            CustomerEntity customerEntity = mapper.convertValue(customer, CustomerEntity.class);
+            repository.save(customerEntity);
+        }
+    }
 }

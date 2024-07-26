@@ -26,9 +26,9 @@ public class CustomerController {
     List<Customer> getAllCustomer(){
         return service.getAllCustomer();
     }
-//
-//    @PutMapping("/update-student")
-//    void updateStudent(@RequestBody Customer customer){
-//        service.updateCustomer(customer);
-//    }
+
+    @PutMapping("/update-student")
+    void updateStudent(@RequestBody Customer customer){
+        service.updateCustomer(customer);
+    }
 }
