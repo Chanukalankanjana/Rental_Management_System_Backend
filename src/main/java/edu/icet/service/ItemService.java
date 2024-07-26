@@ -11,4 +11,6 @@ public interface ItemService {
     List<Item> getAllItem();
 
     void updateItem(Item item);
+
+    boolean deleteItem(Integer id);
 }

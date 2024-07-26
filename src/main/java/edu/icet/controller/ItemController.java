@@ -30,4 +30,9 @@ public class ItemController {
     void updateItem(@RequestBody Item item){
         service.updateItem(item);
     }
+
+    @DeleteMapping("/delete-item/{id}")
+    boolean deleteItem(@PathVariable Integer id){
+        return service.deleteItem(id);
+    }
 }

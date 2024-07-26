@@ -43,4 +43,13 @@ public class ItemServiceImpl implements ItemService {
             repository.save(itemEntity);
         }
     }
+
+    @Override
+    public boolean deleteItem(Integer id) {
+        if (repository.existsById(id)){
+            repository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
 }
