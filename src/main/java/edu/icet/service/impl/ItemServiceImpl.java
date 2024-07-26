@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -52,4 +53,14 @@ public class ItemServiceImpl implements ItemService {
         }
         return false;
     }
+
+    @Override
+    public Item getItemById(Integer id) {
+        if (repository.existsById(id)){
+            Optional<ItemEntity> byId = repository.findById(id);
+            return mapper.convertValue(byId, Item.class);
+        }
+        return null;
+    }
+
 }

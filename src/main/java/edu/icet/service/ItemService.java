@@ -13,4 +13,6 @@ public interface ItemService {
     void updateItem(Item item);
 
     boolean deleteItem(Integer id);
+
+    Item getItemById(Integer id);
 }

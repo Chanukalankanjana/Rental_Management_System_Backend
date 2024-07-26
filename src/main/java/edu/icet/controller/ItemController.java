@@ -35,4 +35,9 @@ public class ItemController {
     boolean deleteItem(@PathVariable Integer id){
         return service.deleteItem(id);
     }
+
+    @GetMapping("/find-by-id/{id}")
+    public Item getItemById(@PathVariable Integer id){
+        return service.getItemById(id);
+    }
 }
