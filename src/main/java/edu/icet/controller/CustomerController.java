@@ -37,8 +37,13 @@ public class CustomerController {
         return service.deleteCustomer(id);
     }
 
-    @GetMapping("/find-by-id")
+    @GetMapping("/find-by-id/{id}")
     public Customer getCustomerById(@PathVariable Integer id){
         return service.getStudentById(id);
+    }
+
+    @GetMapping("/find-by-name")
+    public Customer findByName(@PathVariable String name){
+        return service.findByName(name);
     }
 }
