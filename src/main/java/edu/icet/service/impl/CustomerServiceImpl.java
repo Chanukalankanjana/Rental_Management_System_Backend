@@ -41,4 +41,13 @@ public class CustomerServiceImpl implements CustomerService {
             repository.save(customerEntity);
         }
     }
+
+    @Override
+    public boolean deleteCustomer(Integer id) {
+        if (repository.existsById(id)){
+            repository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
 }

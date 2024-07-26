@@ -27,8 +27,18 @@ public class CustomerController {
         return service.getAllCustomer();
     }
 
-    @PutMapping("/update-student")
+    @PutMapping("/update-cutomer")
     void updateStudent(@RequestBody Customer customer){
         service.updateCustomer(customer);
+    }
+
+    @DeleteMapping("/delete-customer/{id}")
+    boolean deleteCustomer(@PathVariable Integer id){
+        return service.deleteCustomer(id);
+    }
+
+    @GetMapping("/find-by-id")
+    public Customer getCustomerById(@PathVariable Integer id){
+        return service.getStudentById(id);
     }
 }
