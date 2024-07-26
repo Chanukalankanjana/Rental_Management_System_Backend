@@ -25,4 +25,9 @@ public class ItemController {
     List<Item> getAllItem(){
         return service.getAllItem();
     }
+
+    @PutMapping("/update-item")
+    void updateItem(@RequestBody Item item){
+        service.updateItem(item);
+    }
 }

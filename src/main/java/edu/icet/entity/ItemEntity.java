@@ -16,6 +16,6 @@ public class ItemEntity {
     private Integer id;
     private String name;
     private Double rentalPerDay;
-    private boolean availability;
+    private String availability;
     private Double finePerDay;
 }

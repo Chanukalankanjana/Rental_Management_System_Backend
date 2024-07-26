@@ -35,4 +35,12 @@ public class ItemServiceImpl implements ItemService {
         });
         return itemList;
     }
+
+    @Override
+    public void updateItem(Item item) {
+        if (repository.existsById(item.getId())){
+            ItemEntity itemEntity = mapper.convertValue(item, ItemEntity.class);
+            repository.save(itemEntity);
+        }
+    }
 }
