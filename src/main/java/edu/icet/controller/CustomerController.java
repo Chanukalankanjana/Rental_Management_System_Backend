@@ -22,10 +22,10 @@ public class CustomerController {
         service.addCustomer(customer);
     }
 
-//    @GetMapping("/get-all")
-//    List<Customer> getAllCustomer(){
-//        return service.getAllCustomer();
-//    }
+    @GetMapping("/get-all")
+    List<Customer> getAllCustomer(){
+        return service.getAllCustomer();
+    }
 //
 //    @PutMapping("/update-student")
 //    void updateStudent(@RequestBody Customer customer){

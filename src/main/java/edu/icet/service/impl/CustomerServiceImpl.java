@@ -22,17 +22,17 @@ public class CustomerServiceImpl implements CustomerService {
         repository.save(customerEntity);
     }
 
-//    @Override
-//    public List<Customer> getAllCustomer() {
-//        List<Customer> customerLiist = new ArrayList();
-//        Iterable<CustomerEntity> all = repository.findAll();
-//
-//        all.forEach(customerEntity -> {
-//            Customer customer = mapper.convertValue(customerEntity, Customer.class);
-//            customerLiist.add(customer);
-//        });
-//        return customerLiist;
-//    }
+    @Override
+    public List<Customer> getAllCustomer() {
+        List<Customer> customerLiist = new ArrayList();
+        Iterable<CustomerEntity> all = repository.findAll();
+
+        all.forEach(customerEntity -> {
+            Customer customer = mapper.convertValue(customerEntity, Customer.class);
+            customerLiist.add(customer);
+        });
+        return customerLiist;
+    }
 //
 //    @Override
 //    public void updateCustomer(Customer customer) {
