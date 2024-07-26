@@ -42,7 +42,7 @@ public class CustomerController {
         return service.getStudentById(id);
     }
 
-    @GetMapping("/find-by-name")
+    @GetMapping("/find-by-name/{name}")
     public Customer findByName(@PathVariable String name){
         return service.findByName(name);
     }
